@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "nombre": "Juan Carlos Sánchez",
+        "puesto": "Consultor Senior",
+        "resultados": 17,  
+        "evaluacion": {
+        "equipo": 2.1,
+        "comunicacion": 3.0,
+        "iniciativa": 4.0}
+    }
+    ,
+    {
+        "id": 2,
+        "nombre": "María López",
+        "puesto": "Gerente de Proyectos",
+        "resultados": 18,
+        "evaluacion":{
+        "equipo": 2.0,
+        "comunicacion": 3.0,
+        "iniciativa": 4.0}
+    },
+    {
+        "id": 3,
+        "nombre": "Pedro Fernández",
+        "puesto": "Analista de Datos",
+        "resultados": 15,
+        "evaluacion":{
+        "equipo": 3.8,
+        "comunicacion": 3.5,
+        "iniciativa": 4.0}
+    },
+    {
+        "id": 4,
+        "nombre": "Ana García",
+        "puesto": "Desarrolladora Frontend",
+        "resultados": 10,
+        "evaluacion":{
+        "equipo": 4.0,
+        "comunicacion": 4.2,
+        "iniciativa": 4.0}
+    }
+]
