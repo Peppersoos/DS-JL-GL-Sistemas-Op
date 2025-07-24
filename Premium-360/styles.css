@@ -1,42 +1,27 @@
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    background-color: hsl(216, 33%, 97%);
-    color: #333;
+:root {
+  --azul_corp: #2E5BFF;
+  --azul-corp-dark: #1a4ae8;
+  font-family: "Inter", "Arial";
 }
 
-header {
-    background-color: #2E5BFF; /* Azul corporativo */
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
 
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: start; /* Alinea al inicio */
-}
 
 /* Estilos para el formulario y el resultado */
-#formulario, #resultado {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+#formulario,
+#resultado {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 button {
-    background-color: #2E5BFF;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: var(--azul_corp);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 /* Estilos para el formulario */
@@ -44,7 +29,7 @@ button {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 
@@ -66,7 +51,6 @@ button {
 }
 
 button[type="submit"] {
-  background-color: #2E5BFF;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -76,18 +60,25 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #1a4ae8;
+  background-color: var(--azul-corp-dark);
 }
+
 /* Para la lista de empleados */
 .resultado-empleado {
   background: #f9f9f9;
-  border-left: 4px solid #2E5BFF;
+  border-left: 4px solid var(--azul_corp);
   padding: 10px;
   margin-bottom: 10px;
 }
 
+#evaluacion-equipo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #evaluacion-equipo button {
-  background-color: #2E5BFF;
+  background-color: var(--azul_corp);
   color: white;
   padding: 10px 15px;
   border: none;
@@ -95,6 +86,7 @@ button[type="submit"]:hover {
   cursor: pointer;
   margin-bottom: 20px;
 }
+
 /* Tarjetas de empleados */
 .empleado-card {
   background: white;
@@ -107,7 +99,7 @@ button[type="submit"]:hover {
 
 .empleado-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Tags de estado */
@@ -136,7 +128,8 @@ button[type="submit"]:hover {
   margin-bottom: 20px;
 }
 
-#filtros select, #filtros button {
+#filtros select,
+#filtros button {
   padding: 8px 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -146,7 +139,7 @@ button[type="submit"]:hover {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
 }
 
@@ -172,9 +165,10 @@ button[type="submit"]:hover {
 /* Estilos para categorías y preguntas */
 .categoria {
   background: #f5f7fa;
+  border: 1px solid #8885;
   padding: 15px;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin: 10px 0 20px;
 }
 
 .pregunta {
@@ -194,14 +188,15 @@ table {
   margin: 20px 0;
 }
 
-th, td {
+th,
+td {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
 th {
-  background-color: #2E5BFF;
+  background-color: var(--azul_corp);
   color: white;
 }
 
@@ -218,18 +213,13 @@ th {
   flex-direction: column;
   gap: 20px;
 }
-/* creo que no hace faltaaaa */
-.columna-derecha {
-  max-height: calc(100vh - 100px); /* Ajusta 100px según la altura de tu header */
-  overflow-y: auto;
-}
 
 /* Formulario (altura fija o mínima) */
 #formulario {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   /* Altura ajustable según necesidad */
   min-height: 80vh;
 }
@@ -237,24 +227,30 @@ th {
 /* Contenedor de resultados (scroll interno) */
 #contenedor-resultados {
   position: sticky;
-  top: 20px; /* Ajusta según tu header */
-  max-height: 80vh; /* Misma altura que el formulario */
-  overflow-y: auto; /* Scroll vertical si el contenido excede */
+  top: 20px;
+  /* Ajusta según tu header */
+  max-height: 80vh;
+  /* Misma altura que el formulario */
+  overflow-y: auto;
+  /* Scroll vertical si el contenido excede */
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 /* Resultados kuntyyy */
 #resultados-container {
   position: sticky;
-  top: 20px; /* Ajusta según el espacio que quieras desde arriba */
-  max-height: calc(100vh - 40px - 20px); /* 40px header + 20px margen, ajusta según tu diseño */
+  top: 20px;
+  /* Ajusta según el espacio que quieras desde arriba */
+  max-height: calc(100vh - 40px - 20px);
+  /* 40px header + 20px margen, ajusta según tu diseño */
   overflow-y: auto;
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Lista de empleados (siempre visible) */
@@ -262,14 +258,15 @@ th {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .empleado-item {
   background: #f9f9f9;
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 8px;
-  border-left: 4px solid #2E5BFF;
+  border-left: 4px solid var(--azul_corp);
 }
 
 .empleado-item h4 {
@@ -287,7 +284,7 @@ th {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 
@@ -297,7 +294,7 @@ th {
   padding: 12px;
   margin-bottom: 8px;
   border-radius: 6px;
-  border-left: 3px solid #2E5BFF;
+  border-left: 3px solid var(--azul_corp);
 }
 
 .decision-mini {
@@ -362,7 +359,7 @@ th {
 
 /* Botón Volver */
 #lista-filtrada button {
-  background: #2E5BFF;
+  background: var(--azul_corp);
   color: white;
   border: none;
   padding: 8px 15px;
@@ -376,12 +373,13 @@ th {
   padding: 12px;
   margin-bottom: 10px;
   border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Contenedores de scroll (para ambas listas) */
 .contenedor-scroll {
-  max-height: 300px; /* Altura para ~4 empleados (ajusta según tu diseño) */
+  max-height: 300px;
+  /* Altura para ~4 empleados (ajusta según tu diseño) */
   overflow-y: auto;
   padding-right: 10px;
   border: 1px solid #eee;
@@ -401,8 +399,9 @@ th {
 .contenedor-scroll::-webkit-scrollbar {
   width: 8px;
 }
+
 .contenedor-scroll::-webkit-scrollbar-thumb {
-  background: #2E5BFF;
+  background: var(--azul_corp);
   border-radius: 4px;
 }
 
@@ -423,7 +422,7 @@ th {
   margin: 0;
   font-size: 1.1rem;
   color: #333;
-  text-align: left; 
+  text-align: left;
 }
 
 .filtros-container select {
@@ -436,7 +435,7 @@ th {
 .filtros-container button {
   align-self: center;
   padding: 8px 16px;
-  background: #2E5BFF;
+  background: var(--azul_corp);
   color: white;
   border: none;
   border-radius: 4px;
@@ -444,7 +443,9 @@ th {
 }
 
 .contenedor-scroll-equipo {
-  max-height: 300px; /* Altura para ~4 empleados (ajústala) */
+  width: 100%;
+  max-height: 500px;
+  /* Altura para ~4 empleados (ajústala) */
   overflow-y: auto;
   margin-top: 15px;
   padding: 10px;
@@ -457,8 +458,9 @@ th {
 .contenedor-scroll-equipo::-webkit-scrollbar {
   width: 8px;
 }
+
 .contenedor-scroll-equipo::-webkit-scrollbar-thumb {
-  background: #2E5BFF;
+  background: var(--azul_corp);
   border-radius: 4px;
 }
 
@@ -468,5 +470,5 @@ th {
   margin-bottom: 8px;
   background: white;
   border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
